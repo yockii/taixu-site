@@ -2,7 +2,9 @@
 import '../styles/global.css';
 
 const dockerHub = 'https://hub.docker.com/r/yockii/mindverse';
-const version = '0.1.1';
+const repo = 'https://github.com/yockii/mindverse-site';
+const issues = 'https://github.com/yockii/mindverse-site/issues';
+const version = '0.1.2';
 // BASE_URL 在本版本不带尾斜杠，统一去尾再手动拼，避免 /mindverse-sitefavicon.svg 这种漏斜杠。
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -83,12 +85,20 @@ volumes:
 				<span class="text-lg">心域文明</span>
 				<span class="text-sm text-zinc-500">Mindverse</span>
 			</div>
-			<a
-				href={dockerHub}
-				class="rounded-full border border-zinc-700 px-4 py-1.5 text-sm text-zinc-300 transition hover:border-violet-500 hover:text-white"
-				target="_blank"
-				rel="noopener">Docker Hub ↗</a
-			>
+			<nav class="flex items-center gap-3">
+				<a
+					href={repo}
+					class="text-sm text-zinc-400 transition hover:text-white"
+					target="_blank"
+					rel="noopener">GitHub ↗</a
+				>
+				<a
+					href={dockerHub}
+					class="rounded-full border border-zinc-700 px-4 py-1.5 text-sm text-zinc-300 transition hover:border-violet-500 hover:text-white"
+					target="_blank"
+					rel="noopener">Docker Hub ↗</a
+				>
+			</nav>
 		</header>
 
 		<!-- Hero -->
@@ -254,6 +264,17 @@ volumes:
 				专注培育与观察单个数字生命试验个体。它还很稚嫩，会有不完善之处。
 				更远的设想，留待它成长起来之后再谈。
 			</p>
+			<p class="mt-6 text-sm text-zinc-500">
+				遇到问题、有疑问或想法？欢迎到
+				<a
+					href={issues}
+					target="_blank"
+					rel="noopener"
+					class="text-violet-400 underline-offset-4 transition hover:text-violet-300 hover:underline"
+					>GitHub 留言 ↗</a
+				>
+				——这里也是反馈与交流的地方。
+			</p>
 		</section>
 
 		<!-- 结语 -->
@@ -275,7 +296,10 @@ volumes:
 				class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-zinc-600 sm:flex-row"
 			>
 				<span>心域文明 Mindverse · v{version} · 早期实验版本</span>
-				<span>A Digital Life Runtime</span>
+				<span class="flex items-center gap-4">
+					<a href={repo} target="_blank" rel="noopener" class="transition hover:text-zinc-300">GitHub</a>
+					<span>A Digital Life Runtime</span>
+				</span>
 			</div>
 		</footer>
 	</body>
