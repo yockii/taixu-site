@@ -3,6 +3,8 @@ import '../styles/global.css';
 
 const dockerHub = 'https://hub.docker.com/r/yockii/mindverse';
 const version = '0.1.0';
+// BASE_URL 在本版本不带尾斜杠，统一去尾再手动拼，避免 /mindverse-sitefavicon.svg 这种漏斜杠。
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const pillars = [
 	{
@@ -63,7 +65,7 @@ volumes:
 			content="不是聊天机器人，而是一个持续存在、有自己性格与意志的数字生命。"
 		/>
 		<meta property="og:type" content="website" />
-		<link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+		<link rel="icon" href={`${base}/favicon.svg`} />
 	</head>
 	<body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased selection:bg-violet-500/30">
 		<!-- 背景光晕 -->
@@ -118,6 +120,44 @@ volumes:
 				>
 			</div>
 			<p class="mt-6 font-mono text-xs text-zinc-600">v{version} · 早期实验版本</p>
+
+			<!-- 观察面板截图（整页，窗口式呈现 + 底部渐隐暗示「还有更多」）-->
+			<div class="relative mx-auto mt-16 max-w-5xl">
+				<div
+					class="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-tr from-violet-600/20 via-fuchsia-600/10 to-indigo-600/20 blur-2xl"
+				>
+				</div>
+				<div
+					class="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl shadow-violet-950/40 ring-1 ring-white/5"
+				>
+					<!-- 仿浏览器窗口标题栏 -->
+					<div class="flex items-center gap-1.5 border-b border-zinc-800 bg-zinc-900/80 px-4 py-2.5">
+						<span class="h-3 w-3 rounded-full bg-zinc-700"></span>
+						<span class="h-3 w-3 rounded-full bg-zinc-700"></span>
+						<span class="h-3 w-3 rounded-full bg-zinc-700"></span>
+						<span class="ml-3 font-mono text-xs text-zinc-600">localhost:3000 · 观察面板</span>
+					</div>
+					<div class="relative max-h-[560px] overflow-hidden">
+						<img
+							src={`${base}/panel.jpeg`}
+							alt="Mindverse 观察面板 — 实时呈现生命体的状态、目标、记忆、对话与自主行动"
+							class="w-full"
+							loading="eager"
+							decoding="async"
+						/>
+						<!-- 底部渐隐 -->
+						<div
+							class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-zinc-950 to-transparent"
+						>
+						</div>
+					</div>
+				</div>
+				<p class="mt-4 text-center text-sm text-zinc-500">
+					观察面板：实时看它的状态、兴趣、记忆，以及它<span class="text-zinc-300">「说的话」</span>与<span
+						class="text-zinc-300">「做的事」</span
+					>
+				</p>
+			</div>
 		</section>
 
 		<!-- 定位对比 -->
