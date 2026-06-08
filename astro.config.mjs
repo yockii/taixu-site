@@ -2,11 +2,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-// GitHub Pages 项目页：站点根 = https://yockii.github.io/mindverse-site
-// 若以后挂自定义域名，把 site 改成域名、base 改成 '/'。
+// 自定义域名 taixu.icu：站点根服务（base '/'）。本机网关也在根服务，故统一 '/'。
+// （Pages 用 github.io/taixu-site 子路径时才需 base '/taixu-site'；现走自定义域名。）
 export default defineConfig({
-	site: 'https://yockii.github.io',
-	base: '/mindverse-site',
+	site: 'https://taixu.icu',
+	base: '/',
 	vite: {
 		plugins: [tailwindcss()],
 	},
