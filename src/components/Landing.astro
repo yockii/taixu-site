@@ -17,6 +17,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // 各语言落地路径：默认语言在站点根，其余在 /<lang>/。
 const localeHref = (l: Lang) => (l === DEFAULT_LANG ? `${base}/` : `${base}/${l}/`);
 
+// 法务页脚链接：zh 走 /zh/*，其余语言 fallback 到 en 权威页（合「国际站」策略）。
+const legalBase = lang === 'zh' ? `${base}/zh` : base;
+const legalHref = `${legalBase}/legal/`;
+const aiHref = `${legalBase}/ai-disclaimer/`;
+const legalLabels: Record<Lang, { terms: string; ai: string }> = {
+	en: { terms: 'Terms & Privacy', ai: 'AI Disclaimer' },
+	zh: { terms: '服务条款与隐私', ai: 'AI 免责声明' },
+	ja: { terms: '規約・プライバシー', ai: 'AI 免責事項' },
+	ko: { terms: '약관 및 개인정보', ai: 'AI 고지' },
+	es: { terms: 'Términos y privacidad', ai: 'Aviso de IA' },
+	fr: { terms: 'Conditions et confidentialité', ai: 'Avis IA' },
+	de: { terms: 'AGB & Datenschutz', ai: 'KI-Hinweis' },
+};
+const legalT = legalLabels[lang];
+
 const compose = `services:
   taixu:
     image: yockii/taixu:${version}
@@ -244,6 +259,8 @@ const dockerRun = `docker run -d --name taixu --restart unless-stopped \\
 				<div class="flex w-full flex-col items-center justify-between gap-3 sm:flex-row">
 					<span>{t.footer.left} · v{version}</span>
 					<span class="flex items-center gap-4">
+						<a href={legalHref} class="transition hover:text-zinc-300">{legalT.terms}</a>
+						<a href={aiHref} class="transition hover:text-zinc-300">{legalT.ai}</a>
 						<a href={repo} target="_blank" rel="noopener" class="transition hover:text-zinc-300">GitHub</a>
 						<span>{t.footer.tagline}</span>
 					</span>

@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+import { type Lang } from '../i18n';
+
+interface Props {
+	lang: Lang;
+	title: string;
+	updated: string;
+}
+const { lang, title, updated } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const homeHref = lang === 'zh' ? `${base}/zh/` : `${base}/`;
+const backLabel = lang === 'zh' ? '← 返回首页' : '← Back to home';
+const updatedLabel = lang === 'zh' ? '最后更新' : 'Last updated';
+---
+
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="index,follow" />
+		<title>{title} · 太虚 Taixu</title>
+	</head>
+	<body class="min-h-screen bg-zinc-950 text-zinc-300 antialiased">
+		<main class="mx-auto max-w-3xl px-6 py-16">
+			<a href={homeHref} class="text-sm text-emerald-400 transition hover:text-emerald-300">{backLabel}</a>
+			<h1 class="mt-8 text-3xl font-semibold text-zinc-100">{title}</h1>
+			<p class="mt-2 text-xs text-zinc-500">{updatedLabel}: {updated}</p>
+			<div class="tx-prose mt-10 space-y-6 text-sm leading-relaxed text-zinc-400">
+				<slot />
+			</div>
+			<a href={homeHref} class="mt-16 inline-block text-sm text-emerald-400 transition hover:text-emerald-300">{backLabel}</a>
+		</main>
+		<style is:global>
+			.tx-prose h2 { color: #e4e4e7; font-size: 1.15rem; font-weight: 600; margin-top: 2rem; }
+			.tx-prose h3 { color: #d4d4d8; font-size: 1rem; font-weight: 600; margin-top: 1.25rem; }
+			.tx-prose p { margin-top: 0.5rem; }
+			.tx-prose ul { list-style: disc; padding-left: 1.25rem; margin-top: 0.5rem; }
+			.tx-prose li { margin-top: 0.25rem; }
+			.tx-prose a { color: #34d399; text-underline-offset: 4px; }
+			.tx-prose a:hover { text-decoration: underline; }
+			.tx-prose strong { color: #d4d4d8; }
+		</style>
+	</body>
+</html>
