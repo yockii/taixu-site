@@ -71,6 +71,8 @@ export const en: Strings = {
 		body: 'What it says to you and what it does on its own are separate — and may even diverge, like a real mind. It has its own moods, energy, interests and goals, and goes on living its days while you are away.',
 	},
 	start: {
+		nativeLabel: 'No Docker? Grab a native binary (Win / macOS / Linux)',
+		nativeNote: 'Download your platform’s archive from GitHub Releases, unpack it and run ./taixu — then open http://localhost:3000 and follow the genesis onboarding. The bare binary skips the optional embedding model and headless browser (they gracefully degrade); the core life is identical.',
 		title: 'Start raising a life',
 		intro:
 			'All it needs: a model endpoint (any OpenAI-compatible service), a little disk (where its brain and creations live), and a port (to observe it). Just follow the four steps below.',

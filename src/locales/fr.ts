@@ -44,6 +44,8 @@ export const fr: Strings = {
 		body: 'Ce qu’elle vous dit et ce qu’elle fait seule sont distincts, et peuvent même diverger, comme un véritable esprit. Elle a ses propres humeurs, son énergie, ses intérêts et ses objectifs, et continue de vivre ses journées en votre absence.',
 	},
 	start: {
+		nativeLabel: 'Pas de Docker ? Récupérez un binaire natif (Win / macOS / Linux)',
+		nativeNote: 'Téléchargez l’archive de votre plateforme depuis les GitHub Releases, décompressez-la et lancez ./taixu — puis ouvrez http://localhost:3000 et suivez l’accueil de naissance. Le binaire brut omet le modèle d’embedding optionnel et le navigateur headless (dégradation élégante) ; la vie au cœur est identique.',
 		title: 'Commencer à élever une vie',
 		intro: 'Il lui faut seulement : un point d’accès de modèle (tout service compatible OpenAI), un peu de disque (où vivent son cerveau et ses créations) et un port (pour l’observer). Suivez les quatre étapes ci-dessous.',
 		step1: '1 · Récupérez l’image',

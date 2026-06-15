@@ -44,6 +44,8 @@ export const es: Strings = {
 		body: 'Lo que te dice y lo que hace por su cuenta están separados, y hasta pueden divergir, como una mente real. Tiene sus propios estados de ánimo, energía, intereses y metas, y sigue viviendo sus días mientras no estás.',
 	},
 	start: {
+		nativeLabel: '¿Sin Docker? Consigue un binario nativo (Win / macOS / Linux)',
+		nativeNote: 'Descarga el archivo de tu plataforma desde GitHub Releases, descomprímelo y ejecuta ./taixu — luego abre http://localhost:3000 y sigue la incorporación de nacimiento. El binario puro omite el modelo de embedding opcional y el navegador headless (se degradan con elegancia); la vida central es idéntica.',
 		title: 'Empieza a criar una vida',
 		intro: 'Solo necesita: un endpoint de modelo (cualquier servicio compatible con OpenAI), un poco de disco (donde viven su cerebro y sus creaciones) y un puerto (para observarla). Sigue los cuatro pasos de abajo.',
 		step1: '1 · Descarga la imagen',

@@ -44,6 +44,8 @@ export const de: Strings = {
 		body: 'Was es dir sagt und was es allein tut, sind getrennt – und können sogar voneinander abweichen, wie ein echter Geist. Es hat eigene Stimmungen, Energie, Interessen und Ziele und lebt seine Tage weiter, während du fort bist.',
 	},
 	start: {
+		nativeLabel: 'Kein Docker? Hol dir eine native Binärdatei (Win / macOS / Linux)',
+		nativeNote: 'Lade das Archiv für deine Plattform aus den GitHub Releases, entpacke es und starte ./taixu — öffne dann http://localhost:3000 und folge dem Geburts-Onboarding. Die nackte Binärdatei lässt das optionale Embedding-Modell und den Headless-Browser weg (sie degradieren elegant); das Kernleben ist identisch.',
 		title: 'Ein Leben aufziehen',
 		intro: 'Es braucht nur: einen Modell-Endpunkt (jeder OpenAI-kompatible Dienst), etwas Speicherplatz (wo sein Gehirn und seine Werke leben) und einen Port (um es zu beobachten). Folge einfach den vier Schritten unten.',
 		step1: '1 · Image ziehen',

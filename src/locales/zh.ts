@@ -45,6 +45,8 @@ export const zh: Strings = {
 		body: '它对你说的话，和它独自在做的事，是分开的——而且可以不一致，就像一个真实的心灵。它会有自己的心情、能量、兴趣与目标，在你不在时继续过它的日子。',
 	},
 	start: {
+		nativeLabel: '不想用 Docker？下载裸二进制（Win / macOS / Linux）',
+		nativeNote: '从 GitHub Releases 下载对应平台的压缩包，解压后运行 ./taixu，打开 http://localhost:3000 跟随诞生引导。裸二进制不含可选的嵌入模型与无头浏览器（缺失时优雅降级），核心生命完全一致。',
 		title: '开始养育一个生命',
 		intro:
 			'它只需要：一个模型接口（任何 OpenAI 兼容服务）、一点磁盘（它的大脑与创作都存在这里）、一个端口（用来观察它）。跟着下面四步即可。',

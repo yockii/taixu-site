@@ -59,6 +59,8 @@ export interface Strings {
 	pillars: Pillar[];
 	innerOuter: { title: string; body: string };
 	start: {
+		nativeLabel: string;
+		nativeNote: string;
 		title: string;
 		intro: string;
 		step1: string;
