@@ -220,11 +220,18 @@ const dockerRun = `docker run -d --name taixu --restart unless-stopped \\
 				<p class="mt-2 text-xs leading-relaxed text-zinc-500">{t.start.runAltNote}</p>
 			</div>
 
-			<!-- 备选：裸二进制（非 Docker）-->
+			<!-- 备选：裸二进制（非 Docker）— genesis 网页诞生引导，无需 compose/env -->
 			<div class="mt-6 rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
 				<p class="mb-2 text-sm font-medium text-zinc-300">{t.start.nativeLabel}</p>
 				<a href={releases} target="_blank" rel="noopener" class="font-mono text-sm text-emerald-300 underline decoration-dotted underline-offset-4 hover:text-emerald-200">github.com/yockii/taixu-runtime/releases ↗</a>
-				<pre class="mt-3 overflow-x-auto rounded-lg border border-zinc-800 bg-black/60 p-3 text-sm"><code class="font-mono text-emerald-300">./taixu        # then open http://localhost:3000</code></pre>
+				<pre class="mt-3 overflow-x-auto rounded-lg border border-zinc-800 bg-black/60 p-3 text-xs leading-relaxed"><code class="font-mono text-emerald-300"># 1 · download the archive for your OS above, then unzip
+tar -xzf taixu_*_linux_amd64.tar.gz      # Windows: unzip the .zip
+
+# 2 · run it — no Docker, no compose, no env to edit
+./taixu                                   # Windows: taixu.exe
+
+# 3 · open the panel; a genesis onboarding sets up the LLM and births your life
+#     http://localhost:3000</code></pre>
 				<p class="mt-2 text-xs leading-relaxed text-zinc-500">{t.start.nativeNote}</p>
 			</div>
 
