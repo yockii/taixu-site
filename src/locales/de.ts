@@ -46,6 +46,8 @@ export const de: Strings = {
 	start: {
 		nativeLabel: 'Kein Docker? Hol dir eine native Binärdatei (Win / macOS / Linux)',
 		nativeNote: 'Lade das Archiv für deine Plattform aus den GitHub Releases, entpacke es und starte ./taixu — öffne dann http://localhost:3000 und folge dem Geburts-Onboarding. Die nackte Binärdatei lässt das optionale Embedding-Modell und den Headless-Browser weg (sie degradieren elegant); das Kernleben ist identisch.',
+		bridgeLabel: 'Optional: die Coding-Bridge — lass dein Leben echten Code schreiben (läuft auf deinem Host)',
+		bridgeNote: 'Lade taixu-coding-bridge für deinen Host herunter (dasselbe GitHub-Release wie die Runtime), starte sie mit einem geheimen Token und trage dann ihre URL und denselben Token unter „Coding-Bridge“ im Panel ein. Danach kann dein Leben während des Nachdenkens an einen leistungsstarken Coding-Agenten (claude / codex) auf deinem Host delegieren und echten Code schreiben. Die Sicherheit liegt in der Bridge: der Token, ein Arbeitsverzeichnis-Zaun und gefährliche Aktionen, die standardmäßig abgelehnt werden.',
 		title: 'Ein Leben aufziehen',
 		intro: 'Es braucht nur: einen Modell-Endpunkt (jeder OpenAI-kompatible Dienst), etwas Speicherplatz (wo sein Gehirn und seine Werke leben) und einen Port (um es zu beobachten). Folge einfach den vier Schritten unten.',
 		step1: '1 · Image ziehen',

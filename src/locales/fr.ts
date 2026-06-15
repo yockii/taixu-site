@@ -46,6 +46,8 @@ export const fr: Strings = {
 	start: {
 		nativeLabel: 'Pas de Docker ? Récupérez un binaire natif (Win / macOS / Linux)',
 		nativeNote: 'Téléchargez l’archive de votre plateforme depuis les GitHub Releases, décompressez-la et lancez ./taixu — puis ouvrez http://localhost:3000 et suivez l’accueil de naissance. Le binaire brut omet le modèle d’embedding optionnel et le navigateur headless (dégradation élégante) ; la vie au cœur est identique.',
+		bridgeLabel: 'Optionnel : le pont de codage — laissez votre vie écrire du vrai code (s’exécute sur votre hôte)',
+		bridgeNote: 'Téléchargez taixu-coding-bridge pour votre hôte (même release GitHub que le runtime), lancez-le avec un jeton secret, puis saisissez son URL et le même jeton sous « Pont de codage » dans le panneau. Ensuite, votre vie peut déléguer à un puissant agent de codage (claude / codex) sur votre hôte et écrire du vrai code pendant sa délibération. La sécurité réside dans le pont : le jeton, une clôture du répertoire de travail et les actions dangereuses refusées par défaut.',
 		title: 'Commencer à élever une vie',
 		intro: 'Il lui faut seulement : un point d’accès de modèle (tout service compatible OpenAI), un peu de disque (où vivent son cerveau et ses créations) et un port (pour l’observer). Suivez les quatre étapes ci-dessous.',
 		step1: '1 · Récupérez l’image',

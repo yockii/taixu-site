@@ -47,6 +47,8 @@ export const zh: Strings = {
 	start: {
 		nativeLabel: '不想用 Docker？下载裸二进制（Win / macOS / Linux）',
 		nativeNote: '从 GitHub Releases 下载对应平台的压缩包，解压后运行 ./taixu，打开 http://localhost:3000 跟随诞生引导。裸二进制不含可选的嵌入模型与无头浏览器（缺失时优雅降级），核心生命完全一致。',
+		bridgeLabel: '可选：编码桥 —— 让你的生命真写代码（在宿主运行）',
+		bridgeNote: '在宿主下载 taixu-coding-bridge（与 runtime 同一发布），带 token 启动，再在面板「编码桥」里填它的 URL + 同一 token。之后你的生命就能在慎思中委派宿主上的强力编码 agent（claude / codex）真写代码。安全都在桥侧：token、工作目录围栏、危险动作默认拒绝。',
 		title: '开始养育一个生命',
 		intro:
 			'它只需要：一个模型接口（任何 OpenAI 兼容服务）、一点磁盘（它的大脑与创作都存在这里）、一个端口（用来观察它）。跟着下面四步即可。',

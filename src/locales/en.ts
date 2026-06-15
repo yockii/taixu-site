@@ -73,6 +73,8 @@ export const en: Strings = {
 	start: {
 		nativeLabel: 'No Docker? Grab a native binary (Win / macOS / Linux)',
 		nativeNote: 'Download your platform’s archive from GitHub Releases, unpack it and run ./taixu — then open http://localhost:3000 and follow the genesis onboarding. The bare binary skips the optional embedding model and headless browser (they gracefully degrade); the core life is identical.',
+		bridgeLabel: 'Optional: the coding bridge — let your life truly write code (runs on your host)',
+		bridgeNote: 'Download taixu-coding-bridge for your host (same GitHub release as the runtime), start it with a secret token, then enter its URL + the same token under “Coding Bridge” in the panel. After that your life can delegate to a powerful coding agent (claude / codex) on your host and write real code during deliberation. Safety lives in the bridge: the token, a working-directory fence, and dangerous actions denied by default.',
 		title: 'Start raising a life',
 		intro:
 			'All it needs: a model endpoint (any OpenAI-compatible service), a little disk (where its brain and creations live), and a port (to observe it). Just follow the four steps below.',

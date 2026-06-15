@@ -61,6 +61,8 @@ export interface Strings {
 	start: {
 		nativeLabel: string;
 		nativeNote: string;
+		bridgeLabel: string;
+		bridgeNote: string;
 		title: string;
 		intro: string;
 		step1: string;

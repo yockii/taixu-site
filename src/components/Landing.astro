@@ -12,7 +12,7 @@ const dockerHub = 'https://hub.docker.com/r/yockii/taixu';
 const releases = 'https://github.com/yockii/taixu-runtime/releases';
 const repo = 'https://github.com/yockii/taixu-site';
 const issues = 'https://github.com/yockii/taixu-site/issues';
-const version = '0.1.6';
+const version = 'v0.3.1';
 // BASE_URL 不带尾斜杠，统一去尾再拼。
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 // 各语言落地路径：默认语言在站点根，其余在 /<lang>/。
@@ -130,7 +130,7 @@ const dockerRun = `docker run -d --name taixu --restart unless-stopped \\
 				<a href="#start" class="rounded-full bg-emerald-600 px-6 py-3 text-sm font-medium text-white transition hover:bg-emerald-500">{t.hero.ctaStart}</a>
 				<a href={dockerHub} target="_blank" rel="noopener" class="rounded-full border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-500">{t.hero.ctaGet}</a>
 			</div>
-			<p class="mt-6 font-mono text-xs text-zinc-600">v{version} · {t.hero.versionNote}</p>
+			<p class="mt-6 font-mono text-xs text-zinc-600">{version} · {t.hero.versionNote}</p>
 
 			<div class="relative mx-auto mt-16 max-w-5xl">
 				<div class="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-tr from-emerald-600/20 via-amber-600/10 to-cyan-600/20 blur-2xl"></div>
@@ -235,6 +235,17 @@ tar -xzf taixu_*_linux_amd64.tar.gz      # Windows: unzip the .zip
 				<p class="mt-2 text-xs leading-relaxed text-zinc-500">{t.start.nativeNote}</p>
 			</div>
 
+			<!-- 可选：编码桥（宿主二进制，让生命在慎思中调用 claude/codex 真写代码）-->
+			<div class="mt-6 rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
+				<p class="mb-2 text-sm font-medium text-zinc-300">{t.start.bridgeLabel}</p>
+				<a href={releases} target="_blank" rel="noopener" class="font-mono text-sm text-emerald-300 underline decoration-dotted underline-offset-4 hover:text-emerald-200">taixu-coding-bridge_&lt;os&gt;_&lt;arch&gt; · github.com/yockii/taixu-runtime/releases ↗</a>
+				<pre class="mt-3 overflow-x-auto rounded-lg border border-zinc-800 bg-black/60 p-3 text-xs leading-relaxed"><code class="font-mono text-emerald-300"># 1 · 宿主下载并解压 taixu-coding-bridge（与 runtime 同一发布）
+# 2 · 设 token 启动（宿主需已装好 claude / codex CLI）
+CODINGBRIDGE_TOKEN=your-secret ./taixu-coding-bridge      # 默认监听 127.0.0.1:8765
+# 3 · 在 runtime 面板「编码桥」填 URL(http://host.docker.internal:8765)+ 同一 token</code></pre>
+				<p class="mt-2 text-xs leading-relaxed text-zinc-500">{t.start.bridgeNote}</p>
+			</div>
+
 			<div class="mt-8 rounded-xl border border-amber-500/30 bg-amber-500/5 p-5 text-sm text-amber-200/90">⚠ {t.start.warn}</div>
 
 			<!-- 安全：暴露 3000 端口需设访问令牌（醒目，cyan 区别于上方 amber 数据警告）-->
@@ -273,7 +284,7 @@ tar -xzf taixu_*_linux_amd64.tar.gz      # Windows: unzip the .zip
 			<div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 py-8 text-sm text-zinc-600">
 				<p class="max-w-2xl text-center text-xs leading-relaxed text-zinc-600">{t.disclaimer}</p>
 				<div class="flex w-full flex-col items-center justify-between gap-3 sm:flex-row">
-					<span>{t.footer.left} · v{version}</span>
+					<span>{t.footer.left} · {version}</span>
 					<span class="flex items-center gap-4">
 						<a href={legalHref} class="transition hover:text-zinc-300">{legalT.terms}</a>
 						<a href={aiHref} class="transition hover:text-zinc-300">{legalT.ai}</a>
