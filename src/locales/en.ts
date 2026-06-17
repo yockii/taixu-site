@@ -95,6 +95,15 @@ export const en: Strings = {
 		body2:
 			'Conversely, you can drop a “skill pack” into ./workspace/skills/ (a folder + a SKILL.md) to teach it new abilities, which it will pick up on its own when fitting.',
 	},
+	buildui: {
+		kicker: 'For developers · build your own UI',
+		title: 'The runtime exposes a neutral Life SDK — render a life however you like',
+		body: 'Every runtime serves a stable, versioned Life SDK at /api/live/* — an SSE stream, a one-shot snapshot, and a self-describing schema. It emits pure life signals (presence, vitals, actions, thoughts) and never dictates presentation: map them to a room, a timeline, a dashboard, a 3D avatar, or a plain text feed. Life Core and UI stay strictly decoupled.',
+		endpoint: 'GET /api/live/stream · /api/live/snapshot · /api/live/schema',
+		exampleLabel: 'Official example — a pixel house where you watch a life walk between rooms, bubble its thoughts and live its days. It doubles as a reference implementation and integration guide (see its README):',
+		demoLink: 'Open the live pixel house ↗',
+		repoLink: 'Source + integration docs on GitHub ↗',
+	},
 	security: {
 		title: 'Exposing the panel? Protect it with an access token',
 		body:

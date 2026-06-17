@@ -67,6 +67,15 @@ export const de: Strings = {
 		body2:
 			'Umgekehrt kannst du ein „Skill-Paket“ in ./workspace/skills/ ablegen (ein Ordner + eine SKILL.md), um ihm neue Fähigkeiten beizubringen, die es bei passender Gelegenheit von selbst aufgreift.',
 	},
+	buildui: {
+		kicker: 'Für Entwickler · baue deine eigene UI',
+		title: 'Das Runtime stellt ein neutrales Life SDK bereit —— stelle ein Leben dar, wie du willst',
+		body: 'Jedes Runtime bietet unter /api/live/* ein stabiles, versioniertes Life SDK: einen SSE-Stream, einen einmaligen Snapshot und ein selbstbeschreibendes Schema. Es sendet nur Lebenssignale (Präsenz, Vitalwerte, Aktionen, Gedanken) und schreibt die Darstellung nie vor: bilde sie auf einen Raum, eine Zeitleiste, ein Dashboard, einen 3D-Avatar oder einen reinen Textstrom ab. Life Core und UI bleiben strikt entkoppelt.',
+		endpoint: 'GET /api/live/stream · /api/live/snapshot · /api/live/schema',
+		exampleLabel: 'Offizielles Beispiel —— ein Pixelhaus, in dem du ein Leben durch Räume laufen, seine Gedanken aufblubbern und seine Tage leben siehst. Es ist zugleich Referenzimplementierung und Integrationsleitfaden (siehe README):',
+		demoLink: 'Pixelhaus öffnen ↗',
+		repoLink: 'Quellcode + Integrationsdoku auf GitHub ↗',
+	},
 	security: {
 		title: 'Panel exponiert? Schütze es mit einem Zugriffstoken',
 		body:

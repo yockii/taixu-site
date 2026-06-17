@@ -75,6 +75,15 @@ export interface Strings {
 		runAltNote: string; // 关于 TAIXU_ACCESS_TOKEN 留空/填写的说明
 	};
 	disk: { title: string; body1: string; body2: string };
+	buildui: {
+		kicker: string;
+		title: string;
+		body: string;
+		endpoint: string;
+		exampleLabel: string;
+		demoLink: string;
+		repoLink: string;
+	};
 	security: { title: string; body: string; envLine: string; note: string };
 	stage: { body: string; feedbackPre: string; feedbackLink: string; feedbackPost: string };
 	closing: { line: string; cta: string };

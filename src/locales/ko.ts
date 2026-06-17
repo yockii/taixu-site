@@ -67,6 +67,15 @@ export const ko: Strings = {
 		body2:
 			'반대로 ./workspace/skills/ 에 "스킬 팩"(폴더 + SKILL.md)을 넣어 새 능력을 가르칠 수 있으며, 그것은 적절할 때 스스로 가져다 씁니다.',
 	},
+	buildui: {
+		kicker: '개발자용 · 나만의 UI 만들기',
+		title: 'runtime은 중립적인 Life SDK를 제공 —— 생명을 어떻게 표현할지는 당신의 몫',
+		body: '모든 runtime은 /api/live/* 에서 안정적이고 버전 관리되는 Life SDK를 제공합니다: SSE 스트림 + 일회성 스냅샷 + 자기 기술 스키마. 생명의 의미 신호(활동 영역 presence·상태 vitals·행동 act·생각 thought)만 내보내며 표현 방식은 규정하지 않습니다 —— 방·타임라인·대시보드·3D 아바타·텍스트 피드 무엇이든 가능. Life Core와 UI는 엄격히 분리됩니다.',
+		endpoint: 'GET /api/live/stream · /api/live/snapshot · /api/live/schema',
+		exampleLabel: '공식 예제 —— 생명이 방 사이를 걷고, 생각을 띄우고, 하루를 살아가는 픽셀 하우스. 참조 구현이자 연동 가이드이기도 합니다(README 참고):',
+		demoLink: '픽셀 하우스 열기 ↗',
+		repoLink: 'GitHub 소스 + 연동 문서 ↗',
+	},
 	security: {
 		title: '패널을 노출하나요? 액세스 토큰으로 보호하세요',
 		body:

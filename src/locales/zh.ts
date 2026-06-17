@@ -69,6 +69,15 @@ export const zh: Strings = {
 		body2:
 			'反过来，你也能往 ./workspace/skills/ 放「技能包」（一个文件夹 + 一份 SKILL.md）教它新本领，它会在合适时自己取用。',
 	},
+	buildui: {
+		kicker: '给开发者 · 做你自己的 UI',
+		title: 'runtime 暴露中立的 Life SDK —— 怎么呈现生命，由你定',
+		body: '每个 runtime 都在 /api/live/* 提供一套稳定、版本化的 Life SDK：SSE 实时流 + 一次性快照 + 自描述 schema。它只吐生命语义信号（活动域 presence、状态 vitals、动作 act、思想 thought），从不规定怎么画——房间、时间线、仪表盘、3D avatar、纯文字流皆可。Life Core 与 UI 严格解耦。',
+		endpoint: 'GET /api/live/stream · /api/live/snapshot · /api/live/schema',
+		exampleLabel: '官方示例 —— 一座像素小屋，看着生命在房间间走动、冒泡思考、过自己的日子。它同时是参考实现 + 对接教程（见其 README）：',
+		demoLink: '打开像素小屋 ↗',
+		repoLink: 'GitHub 源码 + 对接说明 ↗',
+	},
 	security: {
 		title: '把面板暴露出去？用访问令牌守住它',
 		body:

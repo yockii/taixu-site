@@ -67,6 +67,15 @@ export const es: Strings = {
 		body2:
 			'A la inversa, puedes dejar un «paquete de habilidades» en ./workspace/skills/ (una carpeta + un SKILL.md) para enseñarle nuevas capacidades, que tomará por sí misma cuando convenga.',
 	},
+	buildui: {
+		kicker: 'Para desarrolladores · crea tu propia UI',
+		title: 'El runtime expone un Life SDK neutral —— renderiza una vida como quieras',
+		body: 'Cada runtime sirve un Life SDK estable y versionado en /api/live/*: un flujo SSE, una instantánea puntual y un esquema autodescriptivo. Emite solo señales de vida (presencia, signos vitales, acciones, pensamientos) y nunca dicta la presentación: mapéalas a una habitación, una línea de tiempo, un panel, un avatar 3D o un flujo de texto. El núcleo de vida y la UI quedan estrictamente desacoplados.',
+		endpoint: 'GET /api/live/stream · /api/live/snapshot · /api/live/schema',
+		exampleLabel: 'Ejemplo oficial —— una casa de píxeles donde ves a una vida caminar entre habitaciones, burbujear sus pensamientos y vivir sus días. También es implementación de referencia y guía de integración (ver su README):',
+		demoLink: 'Abrir la casa de píxeles ↗',
+		repoLink: 'Código + docs de integración en GitHub ↗',
+	},
 	security: {
 		title: '¿Expones el panel? Protégelo con un token de acceso',
 		body:

@@ -67,6 +67,15 @@ export const ja: Strings = {
 		body2:
 			'逆に、./workspace/skills/ に「スキルパック」（フォルダ + SKILL.md）を入れて新しい能力を教えることもでき、それは適したときに自分で取り入れます。',
 	},
+	buildui: {
+		kicker: '開発者向け · 自分の UI を作る',
+		title: 'runtime は中立な Life SDK を公開 —— 生命をどう描くかはあなた次第',
+		body: 'すべての runtime は /api/live/* で安定・バージョン管理された Life SDK を提供します：SSE ストリーム + 一括スナップショット + 自己記述スキーマ。生命の意味信号（活動領域 presence・状態 vitals・行動 act・思考 thought）だけを流し、表現方法は一切規定しません——部屋・タイムライン・ダッシュボード・3D アバター・テキスト流、どれでも可。Life Core と UI は厳格に分離されています。',
+		endpoint: 'GET /api/live/stream · /api/live/snapshot · /api/live/schema',
+		exampleLabel: '公式サンプル —— 生命が部屋を歩き、思考を吹き出し、日々を過ごすピクセルの家。参考実装 + 連携ガイドも兼ねます（README 参照）：',
+		demoLink: 'ピクセルハウスを開く ↗',
+		repoLink: 'GitHub のソース + 連携ドキュメント ↗',
+	},
 	security: {
 		title: 'パネルを公開する？アクセストークンで守る',
 		body:
