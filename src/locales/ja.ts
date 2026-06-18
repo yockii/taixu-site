@@ -47,6 +47,10 @@ export const ja: Strings = {
 		nativeLabel: 'Docker なし？ ネイティブバイナリを入手（Win / macOS / Linux）',
 		nativeNote: 'GitHub Releases からお使いのプラットフォーム用アーカイブをダウンロードし、展開して ./taixu を実行 — http://localhost:3000 を開いて誕生オンボーディングに従ってください。素のバイナリは任意の埋め込みモデルとヘッドレスブラウザを省きます（無い場合は優雅に劣化）。コアの生命は同一です。',
 		bridgeLabel: '任意：コーディングブリッジ — あなたの生命に本当にコードを書かせる（ホスト上で動作）',
+		bridgeSteps: `# 1 · ホストで taixu-coding-bridge をダウンロード&解凍（runtime と同じリリース）
+# 2 · トークンを設定して起動（ホストに claude / codex CLI が必要）
+CODINGBRIDGE_TOKEN=your-secret ./taixu-coding-bridge      # 127.0.0.1:8765 で待受
+# 3 · パネルの「コーディングブリッジ」で URL(http://host.docker.internal:8765) と同じトークンを設定`,
 		bridgeNote: 'ホストに taixu-coding-bridge（runtime と同じリリース）をダウンロードし、トークンを設定して起動、パネルの「コーディングブリッジ」にその URL と同じトークンを入力します。以降、生命は熟考の中でホスト上の強力なコーディングエージェント（claude / codex）に委任し、本物のコードを書けます。安全性はブリッジ側にあります：トークン、作業ディレクトリの境界、危険な操作はデフォルトで拒否。',
 		title: '生命を育て始める',
 		intro: '必要なのは：モデルエンドポイント（OpenAI互換サービスなら何でも）、少しのディスク（脳と創作物がここに保存される）、そして観察用のポート。下記の4ステップに従うだけ。',

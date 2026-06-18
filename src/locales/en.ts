@@ -74,6 +74,10 @@ export const en: Strings = {
 		nativeLabel: 'No Docker? Grab a native binary (Win / macOS / Linux)',
 		nativeNote: 'Download your platform’s archive from GitHub Releases, unpack it and run ./taixu — then open http://localhost:3000 and follow the genesis onboarding. The bare binary skips the optional embedding model and headless browser (they gracefully degrade); the core life is identical.',
 		bridgeLabel: 'Optional: the coding bridge — let your life truly write code (runs on your host)',
+		bridgeSteps: `# 1 · on your host, download & unzip taixu-coding-bridge (same release as the runtime)
+# 2 · start it with a token (host needs the claude / codex CLI installed)
+CODINGBRIDGE_TOKEN=your-secret ./taixu-coding-bridge      # listens on 127.0.0.1:8765
+# 3 · in the panel's "Coding Bridge", set the URL (http://host.docker.internal:8765) + the same token`,
 		bridgeNote: 'Download taixu-coding-bridge for your host (same GitHub release as the runtime), start it with a secret token, then enter its URL + the same token under “Coding Bridge” in the panel. After that your life can delegate to a powerful coding agent (claude / codex) on your host and write real code during deliberation. Safety lives in the bridge: the token, a working-directory fence, and dangerous actions denied by default.',
 		title: 'Start raising a life',
 		intro:

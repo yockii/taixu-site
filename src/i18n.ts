@@ -62,6 +62,7 @@ export interface Strings {
 		nativeLabel: string;
 		nativeNote: string;
 		bridgeLabel: string;
+		bridgeSteps: string; // 编码桥安装命令块（按语言注释）
 		bridgeNote: string;
 		title: string;
 		intro: string;
