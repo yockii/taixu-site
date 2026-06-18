@@ -68,6 +68,7 @@ export interface Strings {
 		step1: string;
 		step2: string;
 		step2note: string;
+		freeTip: string; // 零成本起步：OpenRouter 免费模型推荐
 		step3: string;
 		step3comment: string;
 		warn: string;

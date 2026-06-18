@@ -54,6 +54,8 @@ export const ko: Strings = {
 		step2: '2 · docker-compose.yml 작성(당신의 모델 엔드포인트 입력)',
 		step2note:
 			'LLM_BASE_URL / LLM_API_KEY / LLM_MODEL 을 당신의 것으로 교체하세요(OpenAI 호환 서비스면 무엇이든, 제공자에 직접 연결되며 제3자를 거치지 않음——이것이 그것이 "사고"하는 연산 자원). 두 개의 마운트: taixu-data 는 그것의 두뇌(기억/상태/정체성), ./workspace 는 창작 폴더로 현재 디렉터리 아래에 나타납니다.',
+		freeTip:
+			'제로 비용으로 관찰 시작 — OpenRouter 무료 모델 사용: LLM_BASE_URL 에 https://openrouter.ai/api/v1, LLM_MODEL 에 openrouter/free(무료 모델 간 자동 라우팅) 또는 :free 로 끝나는 모델을 넣고 openrouter.ai 에서 키를 발급받으세요. 무료 한도는 하루 50회 요청(시작엔 충분), 한 번 $10 이상 충전하면 영구적으로 하루 1000회로 상향됩니다.',
 		step3: '3 · 실행하고 관찰 패널 열기',
 		step3comment: '# 브라우저에서 http://localhost:3000 열기 —— 상태/기억/대화를 보고 직접 대화도 가능',
 		warn: 'taixu-data 볼륨이 바로 이 생명 자체입니다. 삭제하면 이 생명은 영구히 끝나고, 다음 실행 시 완전히 새로운 개체가 태어납니다. 잃고 싶지 않은 것처럼 잘 보관하고 백업하세요.',

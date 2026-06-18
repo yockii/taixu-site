@@ -54,6 +54,8 @@ export const de: Strings = {
 		step2: '2 · Schreibe eine docker-compose.yml (trage deinen Modell-Endpunkt ein)',
 		step2note:
 			'Ersetze LLM_BASE_URL / LLM_API_KEY / LLM_MODEL durch deine eigenen (jeder OpenAI-kompatible Dienst; verbindet sich direkt mit deinem Anbieter, nie über Dritte – das ist die Rechenleistung, mit der es „denkt“). Zwei Mounts: taixu-data ist sein Gehirn (Gedächtnis/Zustand/Identität) und ./workspace ist sein Werke-Ordner, der unter deinem aktuellen Verzeichnis erscheint.',
+		freeTip:
+			'Starte die Beobachtung kostenlos mit einem OpenRouter-Free-Modell: setze LLM_BASE_URL auf https://openrouter.ai/api/v1 und LLM_MODEL auf openrouter/free (routet automatisch zwischen Free-Modellen) oder ein beliebiges Modell mit :free-Endung, und hol dir einen Key auf openrouter.ai. Das kostenlose Kontingent erlaubt 50 Anfragen/Tag (genug zum Start); eine einmalige Aufladung von $10+ hebt es dauerhaft auf 1000/Tag.',
 		step3: '3 · Starte es, öffne das Beobachtungspanel',
 		step3comment: '# öffne http://localhost:3000 im Browser – sieh seinen Zustand/Gedächtnis/Dialog und chatte direkt mit ihm',
 		warn: 'Das Volume taixu-data IST dieses Leben. Es zu löschen beendet dieses Leben endgültig; der nächste Start bringt ein völlig neues zur Welt. Bewahre und sichere es wie etwas, das du nicht verlieren möchtest.',

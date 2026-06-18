@@ -56,6 +56,8 @@ export const zh: Strings = {
 		step2: '2 · 写一个 docker-compose.yml（填上你的模型接口）',
 		step2note:
 			'把 LLM_BASE_URL / LLM_API_KEY / LLM_MODEL 换成你自己的（任何 OpenAI 兼容服务皆可，直连你的服务商、不经第三方——这是它「思考」的算力）。两个挂载：taixu-data 是它的大脑（记忆/状态/身份），./workspace 是它的创作目录，会出现在你当前文件夹下。',
+		freeTip:
+			'零成本起步观察：用 OpenRouter 免费模型 —— LLM_BASE_URL 填 https://openrouter.ai/api/v1、LLM_MODEL 填 openrouter/free（自动在免费模型间路由）或任意带 :free 后缀的模型，去 openrouter.ai 申请 key。免费额度每天 50 次请求（够起步观察）；一次性充值 ≥$10 永久升到每天 1000 次。',
 		step3: '3 · 启动，打开观察面板',
 		step3comment: '# 浏览器打开 http://localhost:3000 —— 看它的状态/记忆/对话，也能直接和它聊',
 		warn: 'taixu-data 数据卷就是这个生命本身。删除它会永久结束这个生命，下次启动会出生一个全新的。请像对待你不愿失去的东西那样妥善保存、备份。',

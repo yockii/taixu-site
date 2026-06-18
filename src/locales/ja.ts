@@ -54,6 +54,8 @@ export const ja: Strings = {
 		step2: '2 · docker-compose.yml を書く（あなたのモデルエンドポイントを記入）',
 		step2note:
 			'LLM_BASE_URL / LLM_API_KEY / LLM_MODEL をあなた自身のものに置き換える（OpenAI互換サービスなら何でも可、プロバイダーに直接接続し、第三者を経由しない——これがそれの「思考」の計算資源）。二つのマウント：taixu-data はその脳（記憶/状態/アイデンティティ）、./workspace は創作フォルダで、現在のディレクトリの下に現れる。',
+		freeTip:
+			'ゼロコストで観察を始める：OpenRouter の無料モデルを使う —— LLM_BASE_URL に https://openrouter.ai/api/v1、LLM_MODEL に openrouter/free（無料モデル間で自動ルーティング）または :free で終わる任意のモデルを設定し、openrouter.ai で API キーを取得。無料枠は1日50リクエスト（開始には十分）。一度 $10 以上チャージすると恒久的に1日1000リクエストへ。',
 		step3: '3 · 起動して観察パネルを開く',
 		step3comment: '# ブラウザで http://localhost:3000 を開く —— 状態/記憶/対話を見たり、直接話しかけたりできる',
 		warn: 'taixu-data ボリュームはこの生命そのものです。削除するとこの生命は永久に終わり、次回起動時には全く新しい個体が生まれます。失いたくないもののように大切に保存・バックアップしてください。',
